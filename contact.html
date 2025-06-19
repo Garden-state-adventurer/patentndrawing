@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연락처 - P&D</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+  <header class="p-6 lg:px-8 shadow-md flex items-center justify-between">
+    <a href="index.html" class="flex items-center">
+      <img src="PND로고.png" class="h-8 mr-2" alt="P&D Logo">
+      <span class="font-semibold text-gray-900">P&D</span>
+    </a>
+    <nav class="hidden lg:flex gap-x-8">
+      <a href="about.html" class="text-sm font-semibold text-gray-700">소개</a>
+      <a href="careers.html" class="text-sm font-semibold text-gray-700">채용</a>
+      <a href="contact.html" class="text-sm font-semibold text-indigo-600">연락처</a>
+    </nav>
+  </header>
+
+  <main class="max-w-2xl mx-auto px-6 py-20">
+    <h1 class="text-4xl font-bold mb-6 text-gray-800">문의하기</h1>
+    <p class="text-md text-gray-600 mb-8">궁금한 사항이나 요청하실 내용이 있다면 아래 양식을 통해 문의해주세요.</p>
+
+    <form action="mailto:contact@patentdrawing.com" method="POST" enctype="text/plain" class="space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">이름</label>
+        <input type="text" name="name" id="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">이메일</label>
+        <input type="email" name="email" id="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">문의 내용</label>
+        <textarea name="message" id="message" rows="5" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"></textarea>
+      </div>
+      <button type="submit" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-500">보내기</button>
+    </form>
+  </main>
+
+  <footer class="bg-gray-100 text-center text-sm text-gray-600 py-6">
+    &copy; 2025 P&D – Patent and Drawing. All rights reserved.
+  </footer>
+</body>
+</html>
