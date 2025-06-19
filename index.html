@@ -8,22 +8,20 @@
   <style>
     @media (min-width: 1024px) {
       .clip-left {
-        clip-path: polygon(0 0, 90% 0, 80% 100%, 0% 100%);
+        clip-path: polygon(0 0, 95% 0, 85% 100%, 0% 100%);
       }
       .clip-right {
-        clip-path: polygon(10% 0, 100% 0, 100% 100%, 20% 100%);
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 25% 100%);
       }
     }
   </style>
 </head>
 <body class="bg-white">
   <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="index.html" class="-m-1.5 p-1.5 flex items-center">
-          <img class="h-8 w-auto" src="PND로고.png" alt="P&D Logo" />
-          <span class="ml-2 text-xl font-semibold text-gray-900">P&D</span>
-        </a>
+    <nav class="mx-auto max-w-7xl flex items-center justify-between px-6 py-4 lg:px-12" aria-label="Global">
+      <div class="flex items-center space-x-3">
+        <img class="h-12 w-auto" src="PND로고.png" alt="P&D Logo" />
+        <span class="text-2xl font-bold text-gray-900">P&D</span>
       </div>
       <div class="flex lg:hidden">
         <button id="menu-toggle" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
@@ -59,7 +57,7 @@
 
     <!-- 오른쪽 흰색 영역 + 이미지 -->
     <section class="relative z-10 w-full lg:w-1/2 bg-white px-6 py-24 flex items-center justify-center clip-right">
-      <img src="us-patent-camera.png" alt="미국 특허 도면 예시" class="w-full max-w-md rounded shadow-md">
+      <img src="us-patent-camera.png" alt="미국 특허 도면 예시" class="w-full max-w-md rounded">
     </section>
   </main>
 
