@@ -12,7 +12,7 @@
       <div class="flex lg:flex-1">
         <a href="index.html" class="-m-1.5 p-1.5 flex items-center">
           <img class="h-8 w-auto" src="PND로고.png" alt="P&D Logo" />
-          <span class="ml-2 font-semibold text-gray-900">P&D</span>
+          <span class="ml-2 text-xl font-semibold text-gray-900">P&D</span>
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -22,10 +22,10 @@
           </svg>
         </button>
       </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="about.html" class="text-sm font-semibold text-gray-900">소개</a>
-        <a href="careers.html" class="text-sm font-semibold text-gray-900">채용</a>
-        <a href="contact.html" class="text-sm font-semibold text-gray-900">연락처</a>
+      <div class="hidden lg:flex lg:gap-x-12 text-lg">
+        <a href="about.html" class="font-semibold text-gray-900">소개</a>
+        <a href="careers.html" class="font-semibold text-gray-900">채용</a>
+        <a href="contact.html" class="font-semibold text-gray-900">연락처</a>
       </div>
     </nav>
     <div id="mobile-menu" class="hidden lg:hidden px-6 py-4">
@@ -35,23 +35,22 @@
     </div>
   </header>
 
-  <main class="relative isolate px-6 pt-32 lg:px-8">
-    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
-      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-pink-300 to-indigo-300 opacity-30"></div>
-    </div>
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">고품질 특허 도면, P&D에서 쉽고 빠르게</h1>
-        <p class="mt-6 text-lg leading-8 text-gray-600">USPTO 및 EPO 기준에 부합하는 도면을, 한국 도면사들이 50% 이상 저렴한 가격에 제공합니다.</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="contact.html" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">문의하기</a>
-          <a href="about.html" class="text-sm font-semibold text-gray-900">더 알아보기 <span aria-hidden="true">&rarr;</span></a>
-        </div>
+  <main class="flex flex-col lg:flex-row pt-32 min-h-screen">
+    <!-- 왼쪽 소개 -->
+    <section class="bg-beige-100 bg-[#fdf6e4] w-full lg:w-1/2 px-8 py-24 flex flex-col justify-center">
+      <div class="max-w-xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">고품질 특허 도면 외주 서비스</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          P&D는 USPTO 및 EPO 규정에 부합하는 특허 도면을 한국의 숙련된 도면사들이 신속하고 정확하게 제작해드립니다. <br>
+          현지 대비 50% 이상 저렴한 가격으로 제공하며, 자동 견적/파일 업로드 기능으로 효율적인 커뮤니케이션이 가능합니다.
+        </p>
       </div>
-    </div>
-    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
-      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-pink-300 to-indigo-300 opacity-30"></div>
-    </div>
+    </section>
+
+    <!-- 오른쪽 이미지 -->
+    <section class="w-full lg:w-1/2 bg-white flex items-center justify-center p-10">
+      <img src="33f2056f-5b50-44af-9421-3e95fb822a94.png" alt="미국 특허 도면 예시" class="w-full max-w-md rounded shadow-md">
+    </section>
   </main>
 
   <footer class="bg-gray-100 text-center text-sm text-gray-600 py-6">
