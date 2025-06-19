@@ -4,164 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>P&D – Patent and Drawing</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 40px;
-      margin-right: 0.5rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background: #333;
-      margin: 4px 0;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: white;
-        border: 1px solid #ccc;
-        padding: 1rem;
-      }
-      nav.active { display: flex; }
-      .hamburger { display: flex; }
-    }
-
-    .hero {
-      background: linear-gradient(90deg, #3a4ca8, #3f7cd0);
-      color: white;
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    section {
-      padding: 3rem 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    footer {
-      background-color: #eee;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    form input, form textarea {
-      display: block;
-      width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0 1rem;
-      border: 1px solid #ccc;
-    }
-    form button {
-      padding: 0.5rem 1.5rem;
-      background-color: #3f7cd0;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-white">
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="index.html" class="-m-1.5 p-1.5 flex items-center">
+          <img class="h-8 w-auto" src="PND로고.png" alt="P&D Logo" />
+          <span class="ml-2 font-semibold text-gray-900">P&D</span>
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button id="menu-toggle" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="about.html" class="text-sm font-semibold text-gray-900">소개</a>
+        <a href="careers.html" class="text-sm font-semibold text-gray-900">채용</a>
+        <a href="contact.html" class="text-sm font-semibold text-gray-900">연락처</a>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden px-6 py-4">
+      <a href="about.html" class="block py-2 text-base font-semibold text-gray-900">소개</a>
+      <a href="careers.html" class="block py-2 text-base font-semibold text-gray-900">채용</a>
+      <a href="contact.html" class="block py-2 text-base font-semibold text-gray-900">연락처</a>
+    </div>
+  </header>
 
-<header>
-  <div class="logo">
-    <img src="PND로고.png" alt="P&D Logo">
-    <strong>P&D</strong>
-  </div>
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <nav id="nav">
-    <a href="#about">소개</a>
-    <a href="#careers">채용</a>
-    <a href="#contact">연락처</a>
-  </nav>
-</header>
+  <main class="relative isolate px-6 pt-32 lg:px-8">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-pink-300 to-indigo-300 opacity-30"></div>
+    </div>
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">고품질 특허 도면, P&D에서 쉽고 빠르게</h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">USPTO 및 EPO 기준에 부합하는 도면을, 한국 도면사들이 50% 이상 저렴한 가격에 제공합니다.</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="contact.html" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">문의하기</a>
+          <a href="about.html" class="text-sm font-semibold text-gray-900">더 알아보기 <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-pink-300 to-indigo-300 opacity-30"></div>
+    </div>
+  </main>
 
-<section class="hero">
-  <h1>특허 도면의 모든 것, P&D</h1>
-  <p>미국/유럽 특허청 기준의 고품질 도면을<br> 50% 이상 저렴하게, 빠르고 효율적으로</p>
-</section>
+  <footer class="bg-gray-100 text-center text-sm text-gray-600 py-6">
+    &copy; 2025 P&D – Patent and Drawing. All rights reserved.
+  </footer>
 
-<section id="about">
-  <h2>사업 소개</h2>
-  <p>P&D는 미국 및 유럽 로펌과 특허법인을 대상으로, 숙련된 한국 도면사들이 USPTO 및 EPO 기준에 맞춘 고품질 특허 도면을 제공합니다.</p>
-  <h2>멤버 소개</h2>
-  <p>저희 팀은 국내 특허 도면 제작 경력 10년 이상의 전문가들로 구성되어 있으며, 정확한 규정 이해와 빠른 납기 대응력을 강점으로 합니다.</p>
-</section>
-
-<section id="careers">
-  <h2>채용</h2>
-  <p>P&D는 함께 성장할 도면 전문가와 운영 인력을 찾고 있습니다. 이력서는 아래 이메일로 보내주세요.</p>
-  <p><strong>이메일:</strong> recruit@patentdrawing.com</p>
-</section>
-
-<section id="contact">
-  <h2>문의하기</h2>
-  <form action="mailto:contact@patentdrawing.com" method="POST" enctype="text/plain">
-    <label>이름:</label>
-    <input type="text" name="name" required>
-    <label>이메일:</label>
-    <input type="email" name="email" required>
-    <label>문의 내용:</label>
-    <textarea name="message" rows="5" required></textarea>
-    <button type="submit">보내기</button>
-  </form>
-</section>
-
-<footer>
-  &copy; 2025 P&D – Patent and Drawing. All rights reserved.
-</footer>
-
-<script>
-  function toggleMenu() {
-    document.getElementById('nav').classList.toggle('active');
-  }
-</script>
-
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
