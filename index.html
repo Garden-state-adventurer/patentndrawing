@@ -8,15 +8,16 @@
   <style>
     @media (min-width: 1024px) {
       .clip-left {
-        clip-path: polygon(0 0, 100% 0, 110% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
       }
       .clip-right {
-        clip-path: polygon(-10% 0, 100% 0, 100% 100%, 10% 100%);
+        clip-path: polygon(75% 0, 100% 0, 100% 100%, 0% 100%);
       }
     }
   </style>
 </head>
 <body class="bg-white">
+  <!-- 헤더 -->
   <header class="z-50">
     <nav class="mx-auto max-w-6xl flex items-center justify-between px-12 pt-4 pb-2 lg:px-16" aria-label="Global">
       <div class="flex items-center space-x-2">
@@ -43,9 +44,10 @@
     </div>
   </header>
 
+  <!-- 메인 -->
   <main class="relative flex flex-col lg:flex-row min-h-screen overflow-hidden">
-    <!-- 왼쪽 베이지 영역 -->
-    <section class="relative z-10 w-full lg:w-1/2 bg-[#f9ea8a] px-8 pt-8 pb-0 flex flex-col justify-center clip-left">
+    <!-- 왼쪽 노란색 영역 -->
+    <section class="relative z-10 w-full lg:w-1/2 bg-[#fdf785] px-8 pt-12 pb-0 flex flex-col justify-center clip-left">
       <div class="max-w-xl mx-auto">
         <h1 class="text-4xl font-bold text-gray-800 mb-6">고품질 특허 도면 외주 서비스</h1>
         <p class="text-lg text-gray-700 leading-relaxed">
@@ -55,12 +57,13 @@
       </div>
     </section>
 
-    <!-- 오른쪽 흰색 영역 + 이미지 -->
+    <!-- 오른쪽 흰색 + 도면 이미지 -->
     <section class="relative z-10 w-full lg:w-1/2 bg-white px-6 py-24 flex items-center justify-center clip-right">
-      <img src="us-patent-camera.png" alt="미국 특허 도면 예시" class="w-full max-w-md rounded">
+      <img src="us-patent-camera.png" alt="미국 특허 도면 예시" class="w-full max-w-md">
     </section>
   </main>
 
+  <!-- 푸터 -->
   <footer class="bg-gray-100 text-center text-sm text-gray-600 py-6">
     &copy; 2025 P&D – Patent and Drawing. All rights reserved.
   </footer>
