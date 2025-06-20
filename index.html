@@ -5,64 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>P&D – Patent and Drawing</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
-    @media (min-width: 1024px) {
-.clip-left {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-.clip-right {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
+    body {
+      font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    }
   </style>
 </head>
-<body class="bg-white">
-  <body style="font-family: 'Roboto', 'Noto Sans KR', sans-serif;">
+<body class="bg-white text-gray-800 text-lg leading-relaxed">
   <!-- 헤더 -->
   <header class="z-50">
-    <nav class="mx-auto max-w-6xl flex items-center justify-between px-12 pt-4 pb-2 lg:px-16" aria-label="Global">
-      <div class="flex items-center space-x-2">
+    <nav class="mx-auto max-w-6xl flex items-center justify-between px-12 pt-6 pb-3 lg:px-16" aria-label="Global">
+      <a href="index.html" class="flex items-center space-x-2">
         <img class="h-12 w-auto" src="PND로고3.png" alt="P&D Logo" />
-        <span class="text-2xl font-bold text-gray-900">P&D</span>
-      </div>
-      <div class="flex lg:hidden">
-        <button id="menu-toggle" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
-      </div>
+        <span class="text-3xl font-bold text-gray-900">P&D</span>
+      </a>
       <div class="hidden lg:flex lg:gap-x-10 text-lg">
         <a href="about.html" class="font-semibold text-gray-900">소개</a>
         <a href="careers.html" class="font-semibold text-gray-900">채용</a>
         <a href="contact.html" class="font-semibold text-gray-900">연락처</a>
       </div>
     </nav>
-    <div id="mobile-menu" class="hidden lg:hidden px-6 py-4">
-      <a href="about.html" class="block py-2 text-base font-semibold text-gray-900">소개</a>
-      <a href="careers.html" class="block py-2 text-base font-semibold text-gray-900">채용</a>
-      <a href="contact.html" class="block py-2 text-base font-semibold text-gray-900">연락처</a>
-    </div>
   </header>
 
   <!-- 메인 -->
   <main class="relative flex flex-col lg:flex-row min-h-[85vh] overflow-hidden">
     <!-- 왼쪽 노란색 영역 -->
-    <section class="relative z-10 w-full lg:w-1/2 bg-[#fdf5E6] px-8 pt-10 pb-0 flex flex-col justify-center clip-left">
+    <section class="relative z-10 w-full lg:w-1/2 bg-[#fdf5e6] px-6 pt-6 pb-0 flex flex-col justify-center">
       <div class="max-w-xl mx-auto">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">고품질 특허 도면 외주 서비스</h1>
-        <p class="text-lg text-gray-700 leading-relaxed">
-          한국의 숙련된 도면사들이 신속하고 정확하게 <br> 
-          P&D는 USPTO 및 EPO 규정에 부합하는 특허 도면을  제작해드립니다. <br> <br>
-          별도의 고객 사이트에 파일을 업로드 하시면 견적을 받아보실 수 있으며, <br>
-          도면 제작이 완료된 후 도면사들과의 커뮤니케이션 기능을 통해 <br> 빠른 수정도 가능합니다. <br><br><br>
-
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">고품질 특허 도면 외주 서비스</h1>
+        <p class="mb-6">
+          한국의 숙련된 도면사들이 신속하고 정확하게 <br>
+          P&D는 USPTO 및 EPO 규정에 부합하는 특허 도면을 제작해드립니다.
+        </p>
+        <p>
+          별도의 고객 사이트에 파일을 업로드 하시면 견적을 받아보실 수 있으며,<br>
+          도면 제작이 완료된 후 도면사들과의 커뮤니케이션 기능을 통해<br>
+          빠른 수정도 가능합니다.
         </p>
       </div>
     </section>
 
-    <!-- 오른쪽 흰색 + 도면 이미지 -->
-    <section class="relative z-10 w-full lg:w-1/2 bg-white px-6 py-24 flex items-center justify-center clip-right">
-      <img src="us-patent-camera.png" alt="미국 특허 도면 예시" class="w-full max-w-md">
+    <!-- 오른쪽 이미지 영역 -->
+    <section class="relative z-10 w-full lg:w-1/2 bg-white px-6 py-24 flex items-center justify-center">
+      <img src="us-patent-camera.png" alt="미국 특허 도면 예시" class="w-full max-w-lg">
     </section>
   </main>
 
@@ -70,11 +56,5 @@
   <footer class="bg-gray-100 text-center text-sm text-gray-600 py-6">
     &copy; 2025 P&D – Patent and Drawing. All rights reserved.
   </footer>
-
-  <script>
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-  </script>
 </body>
 </html>
