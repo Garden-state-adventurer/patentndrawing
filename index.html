@@ -27,30 +27,47 @@
 </head>
 
 <body class="bg-white">
-  <!-- 헤더 -->
-  <header class="z-50">
-    <nav class="mx-auto max-w-6xl flex items-center justify-between px-12 pt-4 pb-2 lg:px-16" aria-label="Global">
-      <div class="flex items-center space-x-4">
-        <a href="index.html">
-          <img class="h-12 w-auto" src="PND로고3.png" alt="P&D Logo" />
-        </a>
+<!-- 헤더 -->
+<header class="z-50 relative">
+  <nav class="relative z-50 mx-auto max-w-6xl flex items-center justify-between px-12 pt-4 pb-2 lg:px-16 overflow-visible" aria-label="Global">
+    <div class="flex items-center space-x-6">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img class="h-12 w-auto" src="PND로고3.png" alt="P&D Logo" />
         <span class="text-2xl font-bold text-gray-900">P&D</span>
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button id="menu-toggle" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- 데스크탑 메뉴 -->
+    <div class="hidden lg:flex lg:gap-x-10 text-lg relative">
+      <!-- 소개 with dropdown -->
+      <div class="relative group">
+        <button class="font-semibold text-gray-900">소개</button>
+        <div class="absolute left-0 top-full mt-2 w-36 bg-white shadow-md border rounded z-50 hidden group-hover:block">
+          <a href="business.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">사업소개</a>
+          <a href="members.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">멤버소개</a>
+        </div>
       </div>
 
-      <!-- 네비게이션 -->
-      <div class="hidden lg:flex lg:gap-x-10 text-lg">
-        <div class="relative group">
-          <button class="font-semibold text-gray-900">소개</button>
-          <div class="absolute left-0 mt-2 w-36 bg-white shadow-md border rounded group-hover:block z-10">
-            <a href="business.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">사업소개</a>
-            <a href="members.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">멤버소개</a>
-          </div>
-        </div>
-        <a href="careers.html" class="font-semibold text-gray-900">채용</a>
-        <a href="contact.html" class="font-semibold text-gray-900">연락처</a>
-      </div>
-    </nav>
-  </header>
+      <!-- 채용/연락처 -->
+      <a href="careers.html" class="font-semibold text-gray-900">채용</a>
+      <a href="contact.html" class="font-semibold text-gray-900">연락처</a>
+    </div>
+  </nav>
+
+  <!-- 모바일 메뉴 -->
+  <div id="mobile-menu" class="hidden lg:hidden px-6 py-4">
+    <a href="about.html" class="block py-2 text-base font-semibold text-gray-900">소개</a>
+    <a href="careers.html" class="block py-2 text-base font-semibold text-gray-900">채용</a>
+    <a href="contact.html" class="block py-2 text-base font-semibold text-gray-900">연락처</a>
+  </div>
+</header>
 
   <!-- 메인 -->
   <main class="relative flex flex-col lg:flex-row min-h-[85vh] overflow-hidden">
