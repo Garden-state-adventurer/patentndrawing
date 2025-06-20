@@ -43,21 +43,30 @@
         <img class="h-12 w-auto" src="PND로고3.png" alt="P&D Logo" />
         <span class="text-2xl font-bold text-gray-900">P&D</span>
       </a>
+<div class="hidden lg:flex items-center gap-x-10 text-lg">
+  <!-- 소개 -->
+  <div class="relative group">
+    <div class="font-semibold text-gray-900 cursor-pointer">소개</div>
+    <div class="dropdown-content absolute left-0 mt-2 w-32 bg-white shadow-lg rounded-md py-2 px-4 space-y-2 z-50 hidden group-hover:block">
+      <a href="about.html" class="block text-gray-800 hover:text-blue-600">사업소개</a>
+      <a href="team.html" class="block text-gray-800 hover:text-blue-600">멤버소개</a>
+    </div>
+  </div>
 
-      <div class="hidden lg:flex items-center gap-x-10 text-lg">
-        <!-- 소개 -->
-        <div class="relative group">
-          <span class="font-semibold text-gray-900 cursor-pointer">소개</span>
-          <div class="dropdown-content absolute left-0 mt-2 w-32 bg-white shadow-lg rounded-md py-2 px-4 space-y-2 z-50">
-            <a href="about.html" class="block text-gray-800 hover:text-blue-600">사업소개</a>
-            <a href="team.html" class="block text-gray-800 hover:text-blue-600">멤버소개</a>
-          </div>
-        </div>
-        <!-- 채용 -->
-        <a href="careers.html" class="font-semibold text-gray-900">채용</a>
-        <!-- 연락처 -->
-        <a href="contact.html" class="font-semibold text-gray-900">연락처</a>
-      </div>
+  <!-- 채용 -->
+  <div class="relative group">
+    <div class="font-semibold text-gray-900 cursor-pointer">
+      <a href="careers.html" class="block hover:text-blue-600">채용</a>
+    </div>
+  </div>
+
+  <!-- 연락처 -->
+  <div class="relative group">
+    <div class="font-semibold text-gray-900 cursor-pointer">
+      <a href="contact.html" class="block hover:text-blue-600">연락처</a>
+    </div>
+  </div>
+</div>
     </nav>
   </header>
 
