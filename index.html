@@ -13,20 +13,19 @@
     }
 
     .dropdown-content {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      transform: translateY(10px);
+      pointer-events: none;
     }
 
-    .group:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content {
-      animation: fadeIn 0.2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(5px); }
-      to { opacity: 1; transform: translateY(0); }
+    .group:hover .dropdown-content,
+    .dropdown-content:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
     }
   </style>
 </head>
