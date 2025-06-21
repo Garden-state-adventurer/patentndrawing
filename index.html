@@ -7,25 +7,43 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
-
     body {
       font-family: 'Noto Sans KR', sans-serif;
     }
 
-    .dropdown-content {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-      transform: translateY(10px);
-      pointer-events: none;
+    /* 드롭다운 */
+    .dropdown {
+      position: relative;
+      display: inline-block;
     }
 
-    .group:hover .dropdown-content,
-    .dropdown-content:hover {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-      pointer-events: auto;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 140px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 50;
+      padding: 10px 0;
+      border-radius: 0.5rem;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 8px 16px;
+      color: #1f2937; /* gray-800 */
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      color: #2563eb; /* blue-600 */
+      background-color: #f9fafb; /* gray-50 */
     }
   </style>
 </head>
@@ -41,19 +59,19 @@
       </div>
       <div class="hidden lg:flex items-center gap-x-10 text-[1.15rem]">
         <!-- 소개 -->
-        <div class="relative group">
+        <div class="dropdown">
           <span class="font-semibold text-gray-900 cursor-pointer">소개</span>
-          <div class="dropdown-content absolute left-0 mt-2 w-36 bg-white shadow-lg rounded-md py-2 px-4 space-y-2 z-50">
-            <a href="about.html" class="block text-gray-800 hover:text-blue-600">사업소개</a>
-            <a href="team.html" class="block text-gray-800 hover:text-blue-600">멤버소개</a>
+          <div class="dropdown-content">
+            <a href="about.html">사업소개</a>
+            <a href="team.html">멤버소개</a>
           </div>
         </div>
         <!-- 채용 -->
-        <div class="relative group">
+        <div>
           <a href="careers.html" class="font-semibold text-gray-900">채용</a>
         </div>
         <!-- 연락처 -->
-        <div class="relative group">
+        <div>
           <a href="contact.html" class="font-semibold text-gray-900">연락처</a>
         </div>
       </div>
